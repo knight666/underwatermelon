@@ -139,6 +139,7 @@ MonoBehaviour:
   m_level: 0
   hitpoints: 10
   splitVelocity: 80
+  splatEffect: {fileID: 143918, guid: 790458271b89b4757a7f301e7559b7df, type: 2}
 --- !u!114 &11458530
 MonoBehaviour:
   m_ObjectHideFlags: 1
