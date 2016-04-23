@@ -8,10 +8,12 @@ public class WaterMelonController : MonoBehaviour {
 	public static int MaxLevel = 1;
 	public float splitVelocity = 5f;
 	GameStateController gamestate;
+	bool canBeDestroyed = false;
 
 	// Use this for initialization
 	void Start () {
 		gamestate = GameObject.Find("GameState").GetComponent<GameStateController>();
+		StartCoroutine(WaitToBeDestroyable());
 	}
 	
 	// Update is called once per frame
@@ -20,6 +22,12 @@ public class WaterMelonController : MonoBehaviour {
 			Split(m_level);
 		}
 	}
+
+	IEnumerator WaitToBeDestroyable(){
+		yield return new WaitForSeconds(1f);
+		canBeDestroyed = true;
+	}
+
 
 	void Split(int currentLevel) {
 		if (currentLevel < MaxLevel){
@@ -47,7 +55,7 @@ public class WaterMelonController : MonoBehaviour {
 
 
 	void OnCollisionEnter2D(Collision2D c){
-		if(c.gameObject.tag == "Watermelon"){
+		if(c.gameObject.tag == "Watermelon" || !canBeDestroyed){
 			return;
 		}
 
