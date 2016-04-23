@@ -7,6 +7,7 @@ public class Fish : MonoBehaviour {
 	public Rigidbody2D rb;
 	public float suckingSpeed = 2f;
 	public float puffForce = 100f;
+	public float puffRadius = 10f;
 	public GameObject PuffFish;
 	public AudioClip audioSuck;
 	public AudioClip audioPuff;
@@ -63,9 +64,11 @@ public class Fish : MonoBehaviour {
 
 	IEnumerator SuckRoutine(){
 		while(isSucking){
-			RaycastHit2D[] hits = Physics2D.CircleCastAll(new Vector2(transform.position.x,transform.position.y),10,(new Vector2(rb.velocity.x,rb.velocity.y)).normalized);
+			RaycastHit2D[] hits = Physics2D.CircleCastAll(new Vector2(transform.position.x,transform.position.y),puffRadius,(new Vector2(rb.velocity.x,rb.velocity.y)).normalized);
+
 			foreach(RaycastHit2D h in hits){
 				if(h.rigidbody != null){
+					print("THIS GUY "+h.collider.gameObject.name);
 					h.rigidbody.AddForce((transform.position-h.transform.position).normalized*suckingSpeed);
 				}
 			}
@@ -87,13 +90,13 @@ public class Fish : MonoBehaviour {
 	public void Puff(){
 		audio.PlayOneShot(audioPuff, 1.0f);
 
-		RaycastHit2D[] hits = Physics2D.CircleCastAll(new Vector2(transform.position.x,transform.position.y),3,Vector2.zero);
+		RaycastHit2D[] hits = Physics2D.CircleCastAll(new Vector2(transform.position.x,transform.position.y),5,Vector2.zero);
 		foreach(RaycastHit2D h in hits){
 			if(h.rigidbody != null){
 				h.rigidbody.AddForce((h.transform.position-transform.position).normalized*puffForce,ForceMode2D.Impulse);
 
 				if(h.transform.gameObject.tag == "Watermelon"){
-					h.rigidbody.AddForce((h.transform.position-transform.position).normalized*puffForce*10f,ForceMode2D.Impulse);
+					h.rigidbody.AddForce((h.transform.position-transform.position).normalized*puffForce*20f,ForceMode2D.Impulse);
 					h.transform.gameObject.GetComponent<WaterMelonController>().HitMe(3f);
 				}
 			}
