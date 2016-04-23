@@ -3,19 +3,19 @@ using System.Collections;
 
 public class bubblesOnVelocity : MonoBehaviour {
 
-	public static float defaultAmount;
+	public float defaultAmount;
 	private GameObject ball;
 	private Rigidbody2D ballRb;
 	private ParticleSystem particles;
-	private 
 
 	void OnEnable(){
 		if (ball == null) {
-			ball = gameObject;
+			ball = transform.parent.gameObject;
 		}
-		if (particles == null) {
+		if (GetComponent<ParticleSystem> () != null) {
 			particles = GetComponent<ParticleSystem> ();
-		}
+		} 
+
 		if (ball != null) {
 			ballRb = ball.GetComponent<Rigidbody2D> ();
 		}
@@ -23,10 +23,16 @@ public class bubblesOnVelocity : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		float rbVel = ballRb.velocity.magnitude;
+		//change position to ball position
+		transform.position = ball.transform.position;
+
+		//change emission based on velocity of ball
+		float rbVel = ballRb.velocity.magnitude*5;
 		ParticleSystem.EmissionModule em = particles.emission;
 		ParticleSystem.MinMaxCurve mm = new ParticleSystem.MinMaxCurve ();
 		mm.constantMax = defaultAmount + rbVel;
 		em.rate = mm;
+
+
 	}
 }
