@@ -4,16 +4,24 @@ using System.Collections.Generic;
 public class GameStateController : MonoBehaviour {
 
 	public GameObject m_melonPrefab;
+	public GameObject fishPrefab;
 	public List<GameObject> watermelons = new List<GameObject>();
+	public List<Fish> fishes = new List<Fish>();
+	public List<Vector3> fishPositions = new List<Vector3>();
 
 	// Use this for initialization
 	void Start () {
-	
+		foreach(Fish f in fishes){
+			f.startPosition = f.gameObject.transform.position;
+		}
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if(Input.GetKeyDown(KeyCode.R)) {
+			ResetGame();
+		}
 	}
 
 
@@ -29,6 +37,18 @@ public class GameStateController : MonoBehaviour {
 		if(watermelons.Count <= 0){
 			SpawnWatermelon();
 		}
+	}
+
+
+
+	public void ResetGame(){
+		foreach(Fish f in fishes){
+			f.Reset();
+		}
+		foreach(GameObject g in watermelons){
+			Destroy(g);
+		}
+		SpawnWatermelon();
 	}
 
 
