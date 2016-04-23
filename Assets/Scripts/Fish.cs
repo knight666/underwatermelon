@@ -8,11 +8,14 @@ public class Fish : MonoBehaviour {
 	public float suckingSpeed = 2f;
 	public float puffForce = 100f;
 	public GameObject PuffFish;
+	public AudioClip audioSuck;
+	public AudioClip audioPuff;
+	AudioSource audio;
 
 	// Use this for initialization
 	void Start () {
-	
 		rb = GetComponent<Rigidbody2D>();
+		audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -42,6 +45,9 @@ public class Fish : MonoBehaviour {
 
 
 	public void Suck(){
+		if (!audio.isPlaying)
+			audio.PlayOneShot(audioSuck, 1.0f);
+
 		RaycastHit2D[] hits = Physics2D.CircleCastAll(new Vector2(transform.position.x,transform.position.y),10,(new Vector2(rb.velocity.x,rb.velocity.y)).normalized);
 		foreach(RaycastHit2D h in hits){
 			if(h.rigidbody != null){
@@ -51,6 +57,8 @@ public class Fish : MonoBehaviour {
 	}
 
 	public void Puff(){
+		audio.PlayOneShot(audioPuff, 1.0f);
+
 		RaycastHit2D[] hits = Physics2D.CircleCastAll(new Vector2(transform.position.x,transform.position.y),2,Vector2.zero);
 		foreach(RaycastHit2D h in hits){
 			if(h.rigidbody != null){
