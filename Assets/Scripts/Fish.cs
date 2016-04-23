@@ -42,7 +42,7 @@ public class Fish : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.F)) {
 			Suck();
 		}
-		if(Input.GetKeyUp(KeyCode.F)) {
+		else if(Input.GetKeyUp(KeyCode.F)) {
 			StopSuck();
 		}
 		if(Input.GetKeyDown(KeyCode.G)) {
@@ -52,12 +52,18 @@ public class Fish : MonoBehaviour {
 
 
 	public void Suck(){
+		if (isSucking)
+			return;
+
 		isSucking = true;
 		StartCoroutine(SuckRoutine());
 	}
 
 
 	public void StopSuck(){
+		if (!isSucking)
+			return;
+
 		isSucking = false;
 		Destroy(curSuckEffect);
 	}
