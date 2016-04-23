@@ -563,6 +563,8 @@ MonoBehaviour:
   suckingSpeed: 100
   puffForce: 100
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  audioSuck: {fileID: 0}
+  audioPuff: {fileID: 0}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
 --- !u!114 &11409430
 MonoBehaviour:
@@ -577,6 +579,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 2
   control: L
+  speed: 1
+  maxSpeed: 15
 --- !u!114 &11410980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -617,6 +621,8 @@ MonoBehaviour:
   suckingSpeed: 100
   puffForce: 100
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  audioSuck: {fileID: 0}
+  audioPuff: {fileID: 0}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
 --- !u!114 &11414274
 MonoBehaviour:
@@ -646,6 +652,8 @@ MonoBehaviour:
   suckingSpeed: 100
   puffForce: 100
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  audioSuck: {fileID: 0}
+  audioPuff: {fileID: 0}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
 --- !u!114 &11420268
 MonoBehaviour:
@@ -663,6 +671,8 @@ MonoBehaviour:
   suckingSpeed: 100
   puffForce: 100
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  audioSuck: {fileID: 0}
+  audioPuff: {fileID: 0}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
 --- !u!114 &11420912
 MonoBehaviour:
@@ -677,6 +687,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 2
   control: R
+  speed: 1
+  maxSpeed: 15
 --- !u!114 &11422432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -690,6 +702,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 1
   control: R
+  speed: 1
+  maxSpeed: 15
 --- !u!114 &11424560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -706,6 +720,8 @@ MonoBehaviour:
   suckingSpeed: 100
   puffForce: 100
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  audioSuck: {fileID: 0}
+  audioPuff: {fileID: 0}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
 --- !u!114 &11435692
 MonoBehaviour:
@@ -720,6 +736,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 1
   control: L
+  speed: 1
+  maxSpeed: 15
 --- !u!114 &11438122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -757,6 +775,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 3
   control: L
+  speed: 1
+  maxSpeed: 15
 --- !u!114 &11456696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -773,6 +793,8 @@ MonoBehaviour:
   suckingSpeed: 100
   puffForce: 100
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  audioSuck: {fileID: 0}
+  audioPuff: {fileID: 0}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
 --- !u!114 &11461830
 MonoBehaviour:
@@ -802,6 +824,8 @@ MonoBehaviour:
   suckingSpeed: 100
   puffForce: 100
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  audioSuck: {fileID: 0}
+  audioPuff: {fileID: 0}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
 --- !u!114 &11485690
 MonoBehaviour:
@@ -816,6 +840,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 3
   control: R
+  speed: 1
+  maxSpeed: 15
 --- !u!114 &11491226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -829,6 +855,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 4
   control: R
+  speed: 1
+  maxSpeed: 15
 --- !u!114 &11492684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -845,6 +873,8 @@ MonoBehaviour:
   suckingSpeed: 100
   puffForce: 100
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  audioSuck: {fileID: 0}
+  audioPuff: {fileID: 0}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
 --- !u!114 &11492896
 MonoBehaviour:
@@ -859,6 +889,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 4
   control: L
+  speed: 1
+  maxSpeed: 15
 --- !u!114 &11496362
 MonoBehaviour:
   m_ObjectHideFlags: 1
