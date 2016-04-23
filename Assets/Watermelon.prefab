@@ -224,6 +224,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 88ce6c9891daf794f93dd11a9be27c26, type: 3}
   - {fileID: 8300000, guid: 0d2acd24d17b936468fa5b0687e028da, type: 3}
   - {fileID: 8300000, guid: a8273e0d9d6a21547a83c9425de62486, type: 3}
+  audioSplat: {fileID: 8300000, guid: 305679e2c176c98478886a0ba9c5fc0e, type: 3}
   splatEffect: {fileID: 143918, guid: 790458271b89b4757a7f301e7559b7df, type: 2}
 --- !u!114 &11458530
 MonoBehaviour:

@@ -12,8 +12,8 @@ public class WaterMelonController : MonoBehaviour {
 	GameStateController gamestate;
 	bool canBeDestroyed = false;
 	public List<AudioClip> audioHits = new List<AudioClip>();
+	public AudioClip audioSplat;
 	AudioSource audio;
-	static Random audioRandom = new Random();
 	public GameObject splatEffect;
 
 	// Use this for initialization
@@ -60,6 +60,8 @@ public class WaterMelonController : MonoBehaviour {
 		Camera.main.gameObject.GetComponent<CameraShake>().shakeAmount = 1f;
 		Camera.main.gameObject.GetComponent<CameraShake>().enabled = true;
 		Instantiate(splatEffect,transform.position,Quaternion.identity);
+		audio.PlayOneShot(audioSplat, 1.0f);
+
 		Destroy(gameObject);
 	}
 
