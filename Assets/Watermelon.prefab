@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11442248}
   m_Layer: 0
   m_Name: Watermelon
-  m_TagString: Untagged
+  m_TagString: Watermelon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_melonPrefab: {fileID: 143296}
   m_level: 0
-  splitVelocity: 100
+  splitVelocity: 80
 --- !u!212 &21242394
 SpriteRenderer:
   m_ObjectHideFlags: 1

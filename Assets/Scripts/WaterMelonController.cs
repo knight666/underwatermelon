@@ -7,10 +7,11 @@ public class WaterMelonController : MonoBehaviour {
 	public int m_level = 0;
 	public static int MaxLevel = 1;
 	public float splitVelocity = 5f;
+	GameStateController gamestate;
 
 	// Use this for initialization
 	void Start () {
-		
+		gamestate = GameObject.Find("GameState").GetComponent<GameStateController>();
 	}
 	
 	// Update is called once per frame
@@ -27,17 +28,19 @@ public class WaterMelonController : MonoBehaviour {
 			splitMelonLeft.transform.localScale = transform.localScale / 2;
 			splitMelonLeft.transform.localPosition = splitMelonLeft.transform.position + new Vector3(transform.localScale.x,0,0);
 			splitMelonLeft.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
+			gamestate.watermelons.Add(splitMelonLeft);
 
 			GameObject splitMelonRight = (GameObject)Instantiate(m_melonPrefab);
 			splitMelonRight.GetComponent<WaterMelonController>().m_level = currentLevel + 1;
 			splitMelonRight.transform.localScale = transform.localScale / 2;
 			splitMelonRight.transform.position = splitMelonRight.transform.position + new Vector3(-transform.localScale.x,0,0);
 			splitMelonRight.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
+			gamestate.watermelons.Add(splitMelonRight);
 
 		}
 
 
-
+		gamestate.OnWatermelonDestroyed(gameObject);
 
 		Destroy(gameObject);
 	}
