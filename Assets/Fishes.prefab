@@ -583,6 +583,8 @@ MonoBehaviour:
   suckingSpeed: 100
   puffForce: 100
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  audioSuck: {fileID: 0}
+  audioPuff: {fileID: 0}
 --- !u!114 &11409430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -638,6 +640,8 @@ MonoBehaviour:
   suckingSpeed: 100
   puffForce: 100
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  audioSuck: {fileID: 0}
+  audioPuff: {fileID: 0}
 --- !u!114 &11414274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -678,6 +682,8 @@ MonoBehaviour:
   suckingSpeed: 100
   puffForce: 100
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  audioSuck: {fileID: 0}
+  audioPuff: {fileID: 0}
 --- !u!114 &11417372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -706,6 +712,8 @@ MonoBehaviour:
   suckingSpeed: 100
   puffForce: 100
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  audioSuck: {fileID: 0}
+  audioPuff: {fileID: 0}
 --- !u!114 &11420912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -752,6 +760,8 @@ MonoBehaviour:
   suckingSpeed: 100
   puffForce: 100
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  audioSuck: {fileID: 8300000, guid: bd943ab9b42eb544eb708691385c581f, type: 3}
+  audioPuff: {fileID: 8300000, guid: 2ab6c548b6ccfa04d90811572d7905b4, type: 3}
 --- !u!114 &11435692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -834,6 +844,8 @@ MonoBehaviour:
   suckingSpeed: 100
   puffForce: 100
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  audioSuck: {fileID: 0}
+  audioPuff: {fileID: 0}
 --- !u!114 &11461830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -886,6 +898,8 @@ MonoBehaviour:
   suckingSpeed: 100
   puffForce: 100
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  audioSuck: {fileID: 0}
+  audioPuff: {fileID: 0}
 --- !u!114 &11485690
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -944,6 +958,8 @@ MonoBehaviour:
   suckingSpeed: 100
   puffForce: 100
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  audioSuck: {fileID: 0}
+  audioPuff: {fileID: 0}
 --- !u!114 &11492896
 MonoBehaviour:
   m_ObjectHideFlags: 1
