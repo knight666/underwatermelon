@@ -32,13 +32,37 @@ public class GoalManager : MonoBehaviour {
 		if (col.gameObject.tag == "Watermelon") {
 
 			scoring ();
-			Camera.main.gameObject.GetComponent<CameraShake>().seconds = 2f;
-			Camera.main.gameObject.GetComponent<CameraShake>().shakeAmount = 1f;
-			Camera.main.gameObject.GetComponent<CameraShake>().enabled = true;
-
-			gamestate.ResetGame();
+			StartCoroutine(GoalEffect());
+			//gamestate.ResetGame();
 			//Destroy (col.gameObject);
 		}
+	}
+
+	IEnumerator GoalEffect(){
+		Camera.main.gameObject.GetComponent<CameraShake>().seconds = 1.5f;
+		Camera.main.gameObject.GetComponent<CameraShake>().shakeAmount = 1f;
+		Camera.main.gameObject.GetComponent<CameraShake>().enabled = true;
+
+		Time.timeScale = 0.5f;
+
+		foreach(Fish f in gamestate.fishes){
+			f.rb.AddForce((f.gameObject.transform.position-transform.position).normalized*2000f,ForceMode2D.Impulse);
+			f.enabled = false;
+		}
+
+		foreach(GameObject g in gamestate.watermelons){
+			print(g.name);
+			g.GetComponent<WaterMelonController>().DestroyWatermelon();
+		}
+
+		yield return new WaitForSeconds(1.5f);
+		Time.timeScale = 1f;
+		foreach(Fish f in gamestate.fishes){
+			f.enabled = true;
+		}
+		print("RESET");
+		gamestate.ResetGame();
+
 	}
 
 }

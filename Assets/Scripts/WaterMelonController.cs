@@ -48,12 +48,16 @@ public class WaterMelonController : MonoBehaviour {
 			gamestate.watermelons.Add(splitMelonRight);
 
 		}
-
-
-		gamestate.OnWatermelonDestroyed(gameObject);
+			
 		Camera.main.gameObject.GetComponent<CameraShake>().seconds = 0.5f;
 		Camera.main.gameObject.GetComponent<CameraShake>().shakeAmount = 1f;
 		Camera.main.gameObject.GetComponent<CameraShake>().enabled = true;
+		DestroyWatermelon();
+	}
+
+	public void DestroyWatermelon(){
+		gamestate.OnWatermelonDestroyed(gameObject);
+
 		Instantiate(splatEffect,transform.position,Quaternion.identity);
 		Destroy(gameObject);
 	}
@@ -74,7 +78,6 @@ public class WaterMelonController : MonoBehaviour {
 
 	public void HitMe(float val){
 		hitpoints -= val;
-		print(hitpoints);
 		if(hitpoints <= 0){
 			Split(m_level);
 		}
