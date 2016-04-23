@@ -432,6 +432,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1798,34 +1799,6 @@ Prefab:
     - target: {fileID: 412522, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
       propertyPath: m_RootOrder
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 198262, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 147708, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 116234, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 172704, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 145900, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 108934, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 199292, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
