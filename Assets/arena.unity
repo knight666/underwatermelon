@@ -318,7 +318,7 @@ MonoBehaviour:
   gamestate: {fileID: 1643845302}
   confetti: {fileID: 189762, guid: 67dd54014ab804510b10eb66f24f1fdb, type: 2}
   explosion: {fileID: 114836, guid: 9c136484ed8004b6189056b5ba602a8a, type: 2}
-  audioGoal: {fileID: 8300000, guid: 305679e2c176c98478886a0ba9c5fc0e, type: 3}
+  audioGoal: {fileID: 8300000, guid: 38c79be260016437baf8fce03719bfd5, type: 3}
 --- !u!212 &226375858
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -874,7 +874,7 @@ MonoBehaviour:
   gamestate: {fileID: 1643845302}
   confetti: {fileID: 189762, guid: 67dd54014ab804510b10eb66f24f1fdb, type: 2}
   explosion: {fileID: 114836, guid: 9c136484ed8004b6189056b5ba602a8a, type: 2}
-  audioGoal: {fileID: 8300000, guid: 305679e2c176c98478886a0ba9c5fc0e, type: 3}
+  audioGoal: {fileID: 8300000, guid: 38c79be260016437baf8fce03719bfd5, type: 3}
 --- !u!212 &681603506
 SpriteRenderer:
   m_ObjectHideFlags: 0

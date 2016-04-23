@@ -22,7 +22,7 @@ public class GoalManager : MonoBehaviour {
 	}
 
 	void scoring () {
-		GetComponent<AudioSource>().PlayOneShot(audioGoal, 1.0f);
+		GetComponent<AudioSource>().PlayOneShot(audioGoal, 0.5f);
 		if (this.gameObject.name == "goal1") {
 			ScoreManager.score2 += scoreValue;
 		}
