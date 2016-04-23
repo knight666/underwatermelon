@@ -64,7 +64,7 @@ public class WaterMelonController : MonoBehaviour {
 		gamestate.OnWatermelonDestroyed(gameObject);
 
 		Instantiate(splatEffect,transform.position,Quaternion.identity);
-		audio.PlayOneShot(audioSplat, 1.0f);
+		AudioSource.PlayClipAtPoint(audioSplat, Camera.main.transform.position, 1.0f);
 
 		Destroy(gameObject);
 	}
@@ -89,7 +89,8 @@ public class WaterMelonController : MonoBehaviour {
 
 	public void HitMe(float val){
 		int r = (int)Random.Range(0, audioHits.Count);
-		audio.PlayOneShot((AudioClip)audioHits[r], 1.0f);
+		audio.PlayOneShot(audioHits[r], 1.0f);
+
 		hitpoints -= val;
 		if(hitpoints <= 0){
 			Split(m_level);
