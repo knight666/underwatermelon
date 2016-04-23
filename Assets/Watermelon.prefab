@@ -39,7 +39,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143296}
   m_UseAutoMass: 0
-  m_Mass: 15
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -75,6 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_melonPrefab: {fileID: 143296}
   m_level: 0
+  splitVelocity: 100
 --- !u!212 &21242394
 SpriteRenderer:
   m_ObjectHideFlags: 1
