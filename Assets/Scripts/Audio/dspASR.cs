@@ -74,7 +74,7 @@ public class dspASR : MonoBehaviour {
 		}
 	}
 
-	void TriggerAS ()
+	public void TriggerAS ()
 	{
 		_playing = true;
 		var time = AudioSettings.dspTime + 0.1f;
@@ -95,7 +95,7 @@ public class dspASR : MonoBehaviour {
 		}
 	}
 
-	void TriggerR ()
+	public void TriggerR ()
 	{
 		_playing = false;
 		var time = AudioSettings.dspTime + 0.1f;
