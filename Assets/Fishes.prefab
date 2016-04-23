@@ -1946,7 +1946,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   suckingSpeed: 100
   puffForce: 100
-  PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  PuffFish: {fileID: 192992, guid: 5273954e50ebc4b83bd78c3fb309a241, type: 2}
   audioSuck: {fileID: 0}
   audioPuff: {fileID: 0}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
@@ -2004,7 +2004,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   suckingSpeed: 100
   puffForce: 100
-  PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  PuffFish: {fileID: 192992, guid: 38be0d5f0c2df46489515394773a4730, type: 2}
   audioSuck: {fileID: 0}
   audioPuff: {fileID: 0}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
@@ -2035,7 +2035,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   suckingSpeed: 100
   puffForce: 100
-  PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  PuffFish: {fileID: 192992, guid: 5273954e50ebc4b83bd78c3fb309a241, type: 2}
   audioSuck: {fileID: 0}
   audioPuff: {fileID: 0}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
@@ -2176,7 +2176,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   suckingSpeed: 100
   puffForce: 100
-  PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  PuffFish: {fileID: 192992, guid: 38be0d5f0c2df46489515394773a4730, type: 2}
   audioSuck: {fileID: 0}
   audioPuff: {fileID: 0}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
@@ -2207,7 +2207,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   suckingSpeed: 100
   puffForce: 100
-  PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  PuffFish: {fileID: 192992, guid: c7cec361c9d94437897498b3acbd62ad, type: 2}
   audioSuck: {fileID: 0}
   audioPuff: {fileID: 0}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
@@ -2256,7 +2256,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   suckingSpeed: 100
   puffForce: 100
-  PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
+  PuffFish: {fileID: 192992, guid: c7cec361c9d94437897498b3acbd62ad, type: 2}
   audioSuck: {fileID: 0}
   audioPuff: {fileID: 0}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
