@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+#if UNITY_EDITOR_WIN && UNITY_STANDALONE_WIN
 using XInputDotNetPure;
+#endif
 
 public class InputController : MonoBehaviour {
 
@@ -14,8 +16,10 @@ public class InputController : MonoBehaviour {
 	protected float gamepadAngle;
 	protected float gamepadLBumper;
 
+	#if UNITY_EDITOR_WIN && UNITY_STANDALONE_WIN
 	GamePadState state;
 	GamePadState prevState;
+	#endif
 
 	// Use this for initialization
 	void Start () {
@@ -29,9 +33,11 @@ public class InputController : MonoBehaviour {
 		gamepadYAxis = Input.GetAxis("Gamepad" + index + control + "_Y");
 		gamepadLBumper = Input.GetAxis ("Gamepad" + index + control + "_Suck");
 
+		#if UNITY_EDITOR_WIN && UNITY_STANDALONE_WIN
 		// Xinput States
 		prevState = state;
 		state = GamePad.GetState((PlayerIndex)index-1);
+		#endif
 
 
 		// Rotation
@@ -42,6 +48,7 @@ public class InputController : MonoBehaviour {
 		}
 
 
+		#if UNITY_EDITOR_WIN && UNITY_STANDALONE_WIN
 		// Actions
 		// Left player sucking
 		if (prevState.Triggers.Left < 1 && state.Triggers.Left == 1 && control == "L")
@@ -55,6 +62,7 @@ public class InputController : MonoBehaviour {
 		{
 			Debug.Log ("Player " + index + " right sucks.");
 		}
+		#endif
 
 		// Boom/Popup
 		if (Input.GetButtonDown ("Gamepad" + index + control + "_Boom")) {
