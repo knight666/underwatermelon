@@ -32,6 +32,10 @@ public class GoalManager : MonoBehaviour {
 		if (col.gameObject.tag == "Watermelon") {
 
 			scoring ();
+			Camera.main.gameObject.GetComponent<CameraShake>().seconds = 2f;
+			Camera.main.gameObject.GetComponent<CameraShake>().shakeAmount = 1f;
+			Camera.main.gameObject.GetComponent<CameraShake>().enabled = true;
+
 			gamestate.ResetGame();
 			//Destroy (col.gameObject);
 		}
