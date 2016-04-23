@@ -84,7 +84,6 @@ public class WaterMelonController : MonoBehaviour {
 		Rigidbody2D rbOther = c.gameObject.GetComponent<Rigidbody2D>();
 		if(rbOther != null){
 			float force = (rbOther.mass+rbOther.velocity.sqrMagnitude);
-			print(force+" "+force*splitModifier);
 			HitMe(force*splitModifier);
 		}
 	}
