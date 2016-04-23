@@ -10,6 +10,7 @@ public class WaterMelonController : MonoBehaviour {
 	public float splitVelocity = 5f;
 	GameStateController gamestate;
 	bool canBeDestroyed = false;
+	public GameObject splatEffect;
 
 	// Use this for initialization
 	void Start () {
@@ -50,7 +51,10 @@ public class WaterMelonController : MonoBehaviour {
 
 
 		gamestate.OnWatermelonDestroyed(gameObject);
-
+		Camera.main.gameObject.GetComponent<CameraShake>().seconds = 0.5f;
+		Camera.main.gameObject.GetComponent<CameraShake>().shakeAmount = 1f;
+		Camera.main.gameObject.GetComponent<CameraShake>().enabled = true;
+		Instantiate(splatEffect,transform.position,Quaternion.identity);
 		Destroy(gameObject);
 	}
 
