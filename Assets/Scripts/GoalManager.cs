@@ -4,10 +4,10 @@ using System.Collections;
 public class GoalManager : MonoBehaviour {
 
 	public int scoreValue = 1; //Score added to the player after goal
-
+	public GameStateController gamestate;
 
 	void Start () {
-	
+
 	}
 	
 
@@ -29,10 +29,11 @@ public class GoalManager : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D col) {
-		if (col.gameObject.name == "watermelon") {
+		if (col.gameObject.tag == "Watermelon") {
 
 			scoring ();
-			Destroy (col.gameObject);
+			gamestate.ResetGame();
+			//Destroy (col.gameObject);
 		}
 	}
 
