@@ -92,6 +92,7 @@ GameObject:
   - 114: {fileID: 11482160}
   - 114: {fileID: 11492896}
   - 60: {fileID: 6091600}
+  - 114: {fileID: 11477742}
   m_Layer: 0
   m_Name: Fish (6)
   m_TagString: Untagged
@@ -1944,12 +1945,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   rb: {fileID: 0}
-  suckingSpeed: 100
+  suckingSpeed: 500
   puffForce: 100
-  puffRadius: 10
+  puffRadius: 5
   PuffFish: {fileID: 192992, guid: 5273954e50ebc4b83bd78c3fb309a241, type: 2}
-  audioSuck: {fileID: 0}
-  audioPuff: {fileID: 0}
+  audioSuck: {fileID: 8300000, guid: bd943ab9b42eb544eb708691385c581f, type: 3}
+  audioPuff: {fileID: 8300000, guid: 2f88e75aec9976a4caa10c89cf67f9e3, type: 3}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
 --- !u!114 &11409430
 MonoBehaviour:
@@ -1962,7 +1963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901e6b30f85c9a0488e4d517fd828f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 2
+  index: 3
   control: L
   speed: 1
   maxSpeed: 15
@@ -2003,12 +2004,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   rb: {fileID: 0}
-  suckingSpeed: 100
+  suckingSpeed: 500
   puffForce: 100
-  puffRadius: 10
+  puffRadius: 5
   PuffFish: {fileID: 192992, guid: 38be0d5f0c2df46489515394773a4730, type: 2}
-  audioSuck: {fileID: 0}
-  audioPuff: {fileID: 0}
+  audioSuck: {fileID: 8300000, guid: bd943ab9b42eb544eb708691385c581f, type: 3}
+  audioPuff: {fileID: 8300000, guid: 2f88e75aec9976a4caa10c89cf67f9e3, type: 3}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
 --- !u!114 &11414274
 MonoBehaviour:
@@ -2035,12 +2036,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   rb: {fileID: 0}
-  suckingSpeed: 100
+  suckingSpeed: 500
   puffForce: 100
-  puffRadius: 10
+  puffRadius: 5
   PuffFish: {fileID: 192992, guid: 5273954e50ebc4b83bd78c3fb309a241, type: 2}
-  audioSuck: {fileID: 0}
-  audioPuff: {fileID: 0}
+  audioSuck: {fileID: 8300000, guid: bd943ab9b42eb544eb708691385c581f, type: 3}
+  audioPuff: {fileID: 8300000, guid: 2f88e75aec9976a4caa10c89cf67f9e3, type: 3}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
 --- !u!114 &11420268
 MonoBehaviour:
@@ -2055,12 +2056,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   rb: {fileID: 0}
-  suckingSpeed: 100
+  suckingSpeed: 500
   puffForce: 100
-  puffRadius: 10
+  puffRadius: 5
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
-  audioSuck: {fileID: 0}
-  audioPuff: {fileID: 0}
+  audioSuck: {fileID: 8300000, guid: bd943ab9b42eb544eb708691385c581f, type: 3}
+  audioPuff: {fileID: 8300000, guid: 2f88e75aec9976a4caa10c89cf67f9e3, type: 3}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
 --- !u!114 &11420912
 MonoBehaviour:
@@ -2073,7 +2074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901e6b30f85c9a0488e4d517fd828f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 2
+  index: 1
   control: R
   speed: 1
   maxSpeed: 15
@@ -2088,8 +2089,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901e6b30f85c9a0488e4d517fd828f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 1
-  control: R
+  index: 3
+  control: L
   speed: 1
   maxSpeed: 15
 --- !u!114 &11424560
@@ -2105,9 +2106,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   rb: {fileID: 0}
-  suckingSpeed: 100
+  suckingSpeed: 500
   puffForce: 100
-  puffRadius: 10
+  puffRadius: 5
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
   audioSuck: {fileID: 0}
   audioPuff: {fileID: 0}
@@ -2162,7 +2163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901e6b30f85c9a0488e4d517fd828f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 3
+  index: 2
   control: L
   speed: 1
   maxSpeed: 15
@@ -2179,12 +2180,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   rb: {fileID: 0}
-  suckingSpeed: 100
+  suckingSpeed: 500
   puffForce: 100
-  puffRadius: 10
+  puffRadius: 5
   PuffFish: {fileID: 192992, guid: 38be0d5f0c2df46489515394773a4730, type: 2}
-  audioSuck: {fileID: 0}
-  audioPuff: {fileID: 0}
+  audioSuck: {fileID: 8300000, guid: bd943ab9b42eb544eb708691385c581f, type: 3}
+  audioPuff: {fileID: 8300000, guid: 2f88e75aec9976a4caa10c89cf67f9e3, type: 3}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
 --- !u!114 &11461830
 MonoBehaviour:
@@ -2198,6 +2199,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+--- !u!114 &11477742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6075227de6742d4ab0d49a629c074d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectOfInterest: {fileID: 0}
+  audioclipAttack: {fileID: 8300000, guid: bd943ab9b42eb544eb708691385c581f, type: 3}
+  audioclipSustain: {fileID: 8300000, guid: 024191fba0e3e08408b320420f11bc12, type: 3}
+  audioclipRelease: {fileID: 8300000, guid: 2ab6c548b6ccfa04d90811572d7905b4, type: 3}
+  surroundAttack: {fileID: 0}
+  surroundSustain: {fileID: 0}
+  surroundRelease: {fileID: 0}
+  soundTriggers: []
+  volume: 0
+  active: 0
+  eventControlled: 0
 --- !u!114 &11482160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2211,12 +2234,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   rb: {fileID: 0}
-  suckingSpeed: 100
+  suckingSpeed: 500
   puffForce: 100
-  puffRadius: 10
+  puffRadius: 5
   PuffFish: {fileID: 192992, guid: c7cec361c9d94437897498b3acbd62ad, type: 2}
-  audioSuck: {fileID: 0}
-  audioPuff: {fileID: 0}
+  audioSuck: {fileID: 8300000, guid: bd943ab9b42eb544eb708691385c581f, type: 3}
+  audioPuff: {fileID: 8300000, guid: 2f88e75aec9976a4caa10c89cf67f9e3, type: 3}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
 --- !u!114 &11485690
 MonoBehaviour:
@@ -2229,8 +2252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901e6b30f85c9a0488e4d517fd828f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 3
-  control: R
+  index: 4
+  control: L
   speed: 1
   maxSpeed: 15
 --- !u!114 &11491226
@@ -2244,7 +2267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901e6b30f85c9a0488e4d517fd828f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 4
+  index: 2
   control: R
   speed: 1
   maxSpeed: 15
@@ -2261,12 +2284,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
   rb: {fileID: 0}
-  suckingSpeed: 100
+  suckingSpeed: 500
   puffForce: 100
-  puffRadius: 10
+  puffRadius: 5
   PuffFish: {fileID: 192992, guid: c7cec361c9d94437897498b3acbd62ad, type: 2}
-  audioSuck: {fileID: 0}
-  audioPuff: {fileID: 0}
+  audioSuck: {fileID: 8300000, guid: bd943ab9b42eb544eb708691385c581f, type: 3}
+  audioPuff: {fileID: 8300000, guid: 2f88e75aec9976a4caa10c89cf67f9e3, type: 3}
   suckEffect: {fileID: 148928, guid: fb661ff7cc3d14e669d542dd2fcf40eb, type: 2}
 --- !u!114 &11492896
 MonoBehaviour:

@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &114268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 451020}
+  - 60: {fileID: 6025824}
+  m_Layer: 0
+  m_Name: FishesCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &451020
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114268}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071067}
+  m_LocalPosition: {x: -17.4, y: 7, z: 0}
+  m_LocalScale: {x: 0.40000004, y: 0.40000004, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!60 &6025824
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114268}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 892089994c9520f49960296d25388167, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.17999999, y: -4.87}
+      - {x: 0.57918954, y: -4.08822}
+      - {x: 1.3996781, y: -2.3259733}
+      - {x: 1.9509649, y: -0.6482217}
+      - {x: 2.228224, y: 0.76725507}
+      - {x: 2.2637064, y: 2.3864462}
+      - {x: 2.1619291, y: 3.0891943}
+      - {x: 2.2082238, y: 3.4020853}
+      - {x: 1.8419294, y: 4.4564486}
+      - {x: 1.2427394, y: 5.840964}
+      - {x: 0.65999997, y: 6.66}
+      - {x: 0.9452477, y: 6.932754}
+      - {x: 1.11, y: 7.33}
+      - {x: 0.95626974, y: 7.57889}
+      - {x: 0.49451736, y: 7.5891895}
+      - {x: 0.06274015, y: 7.4774117}
+      - {x: -0.71162784, y: 7.6293774}
+      - {x: -1.051931, y: 7.466292}
+      - {x: -0.9759755, y: 6.9869633}
+      - {x: -0.61918926, y: 6.6599984}
+      - {x: -1.2309319, y: 5.830595}
+      - {x: -1.5497379, y: 5.190918}
+      - {x: -2.229189, y: 3.3571048}
+      - {x: -2.1747997, y: 3.1381698}
+      - {x: -2.2283542, y: 0.9466597}
+      - {x: -1.7100248, y: -1.4416695}
+      - {x: -1.0483546, y: -3.1450126}
+      - {x: -0.17999999, y: -4.87}
+      - {x: 0.0015780465, y: -7.6148696}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 114268}
+  m_IsPrefabParent: 1
