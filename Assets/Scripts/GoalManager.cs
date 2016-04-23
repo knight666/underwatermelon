@@ -56,8 +56,9 @@ public class GoalManager : MonoBehaviour {
 			f.enabled = false;
 		}
 
-		print(gamestate.watermelons.Count);
+		//print(gamestate.watermelons.Count);
 		for (int i = 0; i < gamestate.watermelons.Count; i++) {
+		//	print(gamestate.watermelons[i].name);
 			gamestate.watermelons[i].GetComponent<WaterMelonController>().DestroyWatermelon();
 		}
 
@@ -67,7 +68,7 @@ public class GoalManager : MonoBehaviour {
 		foreach(Fish f in gamestate.fishes){
 			f.enabled = true;
 		}
-		print("RESET");
+		//print("RESET");
 		gamestate.isResetting = false;
 		gamestate.ResetGame();
 
