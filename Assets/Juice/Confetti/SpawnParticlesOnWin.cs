@@ -6,7 +6,11 @@ public class SpawnParticlesOnWin : MonoBehaviour {
 
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.P)) {
-			Instantiate (particles, transform.position, Quaternion.identity);
+			SpawnConfetti ();	
 		}
+	}
+
+	void SpawnConfetti(){
+		Instantiate (particles, Vector3.zero, Quaternion.identity);
 	}
 }
