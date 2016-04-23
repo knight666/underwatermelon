@@ -7,7 +7,7 @@ public class GoalManager : MonoBehaviour {
 	public GameStateController gamestate;
 
 	void Start () {
-
+		
 	}
 	
 
@@ -39,6 +39,7 @@ public class GoalManager : MonoBehaviour {
 	}
 
 	IEnumerator GoalEffect(){
+		gamestate.isResetting = true;
 		Camera.main.gameObject.GetComponent<CameraShake>().seconds = 1.5f;
 		Camera.main.gameObject.GetComponent<CameraShake>().shakeAmount = 1f;
 		Camera.main.gameObject.GetComponent<CameraShake>().enabled = true;
@@ -50,17 +51,19 @@ public class GoalManager : MonoBehaviour {
 			f.enabled = false;
 		}
 
-		foreach(GameObject g in gamestate.watermelons){
-			print(g.name);
-			g.GetComponent<WaterMelonController>().DestroyWatermelon();
+		print(gamestate.watermelons.Count);
+		for (int i = 0; i < gamestate.watermelons.Count; i++) {
+			gamestate.watermelons[i].GetComponent<WaterMelonController>().DestroyWatermelon();
 		}
 
 		yield return new WaitForSeconds(1.5f);
+
 		Time.timeScale = 1f;
 		foreach(Fish f in gamestate.fishes){
 			f.enabled = true;
 		}
 		print("RESET");
+		gamestate.isResetting = false;
 		gamestate.ResetGame();
 
 	}

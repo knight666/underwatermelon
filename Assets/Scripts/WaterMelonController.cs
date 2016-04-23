@@ -71,6 +71,10 @@ public class WaterMelonController : MonoBehaviour {
 
 
 	void OnCollisionEnter2D(Collision2D c){
+		if(c.gameObject.tag == "Goal"){
+			//DestroyWatermelon();
+		}
+
 		if(c.gameObject.tag == "Watermelon" || !canBeDestroyed){
 			return;
 		}
