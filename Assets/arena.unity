@@ -246,6 +246,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: 1
   gamestate: {fileID: 1643845302}
+  confetti: {fileID: 189762, guid: 67dd54014ab804510b10eb66f24f1fdb, type: 2}
+  explosion: {fileID: 114836, guid: 9c136484ed8004b6189056b5ba602a8a, type: 2}
 --- !u!212 &226375858
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -441,6 +443,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: 1
   gamestate: {fileID: 1643845302}
+  confetti: {fileID: 189762, guid: 67dd54014ab804510b10eb66f24f1fdb, type: 2}
+  explosion: {fileID: 114836, guid: 9c136484ed8004b6189056b5ba602a8a, type: 2}
 --- !u!212 &681603506
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1377,6 +1381,34 @@ Prefab:
     - target: {fileID: 412522, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 198262, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 147708, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 116234, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 172704, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 145900, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108934, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199292, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}

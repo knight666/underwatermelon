@@ -5,6 +5,8 @@ public class GoalManager : MonoBehaviour {
 
 	public int scoreValue = 1; //Score added to the player after goal
 	public GameStateController gamestate;
+	public GameObject confetti;
+	public GameObject explosion;
 
 	void Start () {
 		
@@ -32,19 +34,22 @@ public class GoalManager : MonoBehaviour {
 		if (col.gameObject.tag == "Watermelon") {
 
 			scoring ();
-			StartCoroutine(GoalEffect());
+			StartCoroutine(GoalEffect(col.contacts[0].point));
 			//gamestate.ResetGame();
 			//Destroy (col.gameObject);
 		}
 	}
 
-	IEnumerator GoalEffect(){
+	IEnumerator GoalEffect(Vector3 pos){
 		gamestate.isResetting = true;
 		Camera.main.gameObject.GetComponent<CameraShake>().seconds = 1.5f;
 		Camera.main.gameObject.GetComponent<CameraShake>().shakeAmount = 1f;
 		Camera.main.gameObject.GetComponent<CameraShake>().enabled = true;
 
 		Time.timeScale = 0.5f;
+		Instantiate(confetti,pos,Quaternion.identity);
+		Instantiate(explosion,pos,Quaternion.identity);
+
 
 		foreach(Fish f in gamestate.fishes){
 			f.rb.AddForce((f.gameObject.transform.position-transform.position).normalized*2000f,ForceMode2D.Impulse);

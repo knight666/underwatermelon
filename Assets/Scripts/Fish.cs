@@ -10,6 +10,7 @@ public class Fish : MonoBehaviour {
 	public GameObject PuffFish;
 	public GameObject suckEffect;
 	GameObject curSuckEffect;
+	bool isSucking = false;
 
 	// Use this for initialization
 	void Start () {
@@ -34,8 +35,11 @@ public class Fish : MonoBehaviour {
 
 
 
-		if(Input.GetKey(KeyCode.F)) {
+		if(Input.GetKeyDown(KeyCode.F)) {
 			Suck();
+		}
+		if(Input.GetKeyUp(KeyCode.F)) {
+			StopSuck();
 		}
 		if(Input.GetKeyDown(KeyCode.G)) {
 			Puff();
@@ -44,19 +48,33 @@ public class Fish : MonoBehaviour {
 
 
 	public void Suck(){
-		RaycastHit2D[] hits = Physics2D.CircleCastAll(new Vector2(transform.position.x,transform.position.y),10,(new Vector2(rb.velocity.x,rb.velocity.y)).normalized);
-		foreach(RaycastHit2D h in hits){
-			if(h.rigidbody != null){
-				h.rigidbody.AddForce((transform.position-h.transform.position).normalized*suckingSpeed);
-			}
-		}
-		if(curSuckEffect == null){
-			curSuckEffect = Instantiate(suckEffect);
-			curSuckEffect.transform.SetParent(transform);
-			curSuckEffect.transform.position = transform.position + (new Vector3(rb.velocity.x,rb.velocity.y,0)).normalized;
-		}
-
+		isSucking = true;
+		StartCoroutine(SuckRoutine());
 	}
+
+
+	public void StopSuck(){
+		isSucking = false;
+		Destroy(curSuckEffect);
+	}
+
+	IEnumerator SuckRoutine(){
+		while(isSucking){
+			RaycastHit2D[] hits = Physics2D.CircleCastAll(new Vector2(transform.position.x,transform.position.y),10,(new Vector2(rb.velocity.x,rb.velocity.y)).normalized);
+			foreach(RaycastHit2D h in hits){
+				if(h.rigidbody != null){
+					h.rigidbody.AddForce((transform.position-h.transform.position).normalized*suckingSpeed);
+				}
+			}
+			if(curSuckEffect == null){
+				curSuckEffect = Instantiate(suckEffect);
+				curSuckEffect.transform.SetParent(transform);
+				curSuckEffect.transform.position = transform.position + (new Vector3(rb.velocity.x,rb.velocity.y,0)).normalized;
+			}
+			yield return new WaitForEndOfFrame();
+		}
+	}
+
 
 	public void Puff(){
 		RaycastHit2D[] hits = Physics2D.CircleCastAll(new Vector2(transform.position.x,transform.position.y),2,Vector2.zero);
