@@ -840,6 +840,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 1
   control: L
+  speed: 0
+  maxSpeed: 0
 --- !u!114 &1643845302 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11414198, guid: 6c009eba194204a6cb7944143abb2ea9,

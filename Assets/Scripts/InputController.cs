@@ -16,6 +16,12 @@ public class InputController : MonoBehaviour {
 	protected float gamepadAngle;
 	protected float gamepadLBumper;
 
+	protected Fish fishScript;
+	protected Rigidbody2D rb;
+
+	public float speed;
+	public float maxSpeed;
+
 	#if UNITY_EDITOR_WIN && UNITY_STANDALONE_WIN
 	GamePadState state;
 	GamePadState prevState;
@@ -23,7 +29,8 @@ public class InputController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		fishScript = this.gameObject.GetComponent<Fish> ();
+		rb = this.gameObject.GetComponent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
@@ -45,6 +52,8 @@ public class InputController : MonoBehaviour {
 			// calculate the angle from the gamepad axis and rotate it yeah 8-) 
 			gamepadAngle = Mathf.Atan2(gamepadXAxis, gamepadYAxis) * Mathf.Rad2Deg;
 			transform.eulerAngles = new Vector3(0, 0, gamepadAngle - 180);
+			rb.velocity += new Vector2(gamepadXAxis*speed,-gamepadYAxis*speed);
+			rb.velocity = Vector2.ClampMagnitude (rb.velocity, maxSpeed);
 		}
 
 
@@ -54,6 +63,12 @@ public class InputController : MonoBehaviour {
 		if (prevState.Triggers.Left < 1 && state.Triggers.Left == 1 && control == "L")
 		{
 			Debug.Log ("Player " + index + " left sucks.");
+			fishScript.Suck();
+		}
+		if (prevState.Triggers.Left == 1 && state.Triggers.Left < 1 && control == "L")
+		{
+			Debug.Log ("Player " + index + " left sucks.");
+			fishScript.Suck(); //TODO: use the stopfunction when the function is there
 		}
 
 
@@ -61,12 +76,19 @@ public class InputController : MonoBehaviour {
 		if (prevState.Triggers.Right < 1 && state.Triggers.Right == 1 && control == "R")
 		{
 			Debug.Log ("Player " + index + " right sucks.");
+			fishScript.Suck();
+		}
+		if (prevState.Triggers.Right == 1 && state.Triggers.Right < 1 && control == "R")
+		{
+			Debug.Log ("Player " + index + " right sucks.");
+			fishScript.Suck(); //TODO: use the stopfunction when the function is there
 		}
 		#endif
 
-		// Boom/Popup
+		// Puff
 		if (Input.GetButtonDown ("Gamepad" + index + control + "_Boom")) {
 			Debug.Log ("Player " + index + control + " booms.");
+			fishScript.Puff ();
 		}
 
 
