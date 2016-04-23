@@ -11,7 +11,6 @@ GameObject:
   - 212: {fileID: 21266336}
   - 50: {fileID: 5061016}
   - 58: {fileID: 5838938}
-  - 114: {fileID: 11465238}
   - 114: {fileID: 11451790}
   m_Layer: 0
   m_Name: Fish
@@ -79,18 +78,6 @@ MonoBehaviour:
   suckingSpeed: 100
   puffForce: 100
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
---- !u!114 &11465238
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 151138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ecb9890ac92649d1a7838e7d022d150, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!212 &21266336
 SpriteRenderer:
   m_ObjectHideFlags: 1

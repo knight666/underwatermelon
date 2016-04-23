@@ -12,8 +12,8 @@ public class WaterMelonController : MonoBehaviour {
 	GameStateController gamestate;
 	bool canBeDestroyed = false;
 	public List<AudioClip> audioHits = new List<AudioClip>();
+	public AudioClip audioSplat;
 	AudioSource audio;
-	static Random audioRandom = new Random();
 	public GameObject splatEffect;
 
 	// Use this for initialization
@@ -53,18 +53,28 @@ public class WaterMelonController : MonoBehaviour {
 			gamestate.watermelons.Add(splitMelonRight);
 
 		}
-
-
-		gamestate.OnWatermelonDestroyed(gameObject);
+			
 		Camera.main.gameObject.GetComponent<CameraShake>().seconds = 0.5f;
 		Camera.main.gameObject.GetComponent<CameraShake>().shakeAmount = 1f;
 		Camera.main.gameObject.GetComponent<CameraShake>().enabled = true;
+		DestroyWatermelon();
+	}
+
+	public void DestroyWatermelon(){
+		gamestate.OnWatermelonDestroyed(gameObject);
+
 		Instantiate(splatEffect,transform.position,Quaternion.identity);
+		AudioSource.PlayClipAtPoint(audioSplat, Camera.main.transform.position, 1.0f);
+
 		Destroy(gameObject);
 	}
 
 
 	void OnCollisionEnter2D(Collision2D c){
+		if(c.gameObject.tag == "Goal"){
+			//DestroyWatermelon();
+		}
+
 		if(c.gameObject.tag == "Watermelon" || !canBeDestroyed){
 			return;
 		}
@@ -79,9 +89,9 @@ public class WaterMelonController : MonoBehaviour {
 
 	public void HitMe(float val){
 		int r = (int)Random.Range(0, audioHits.Count);
-		audio.PlayOneShot((AudioClip)audioHits[r], 1.0f);
+		audio.PlayOneShot(audioHits[r], 1.0f);
+
 		hitpoints -= val;
-		print(hitpoints);
 		if(hitpoints <= 0){
 			Split(m_level);
 		}
