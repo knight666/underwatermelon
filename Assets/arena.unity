@@ -847,6 +847,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 1
   control: L
+  speed: 0
+  maxSpeed: 0
 --- !u!114 &1643845302 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11414198, guid: 6c009eba194204a6cb7944143abb2ea9,
@@ -1384,31 +1386,31 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 198262, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 147708, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 116234, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 172704, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 145900, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108934, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 199292, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
