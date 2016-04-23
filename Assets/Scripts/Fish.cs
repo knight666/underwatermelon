@@ -14,11 +14,13 @@ public class Fish : MonoBehaviour {
 	public GameObject suckEffect;
 	GameObject curSuckEffect;
 	bool isSucking = false;
+	dspASR asr;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		audio = GetComponent<AudioSource>();
+		asr = GetComponent<dspASR>();
 	}
 	
 	// Update is called once per frame
@@ -38,7 +40,7 @@ public class Fish : MonoBehaviour {
 
 
 
-		if(Input.GetKeyDown(KeyCode.F)) {
+		if(Input.GetKeyDown(KeyCode.F) && !isSucking) {
 			Suck();
 		}
 		if(Input.GetKeyUp(KeyCode.F)) {
@@ -52,12 +54,14 @@ public class Fish : MonoBehaviour {
 
 	public void Suck(){
 		isSucking = true;
+		asr.TriggerAS();
 		StartCoroutine(SuckRoutine());
 	}
 
 
 	public void StopSuck(){
 		isSucking = false;
+		asr.TriggerR();
 		Destroy(curSuckEffect);
 	}
 
