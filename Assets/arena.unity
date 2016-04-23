@@ -186,7 +186,7 @@ GameObject:
   - 60: {fileID: 226375856}
   m_Layer: 0
   m_Name: goal2
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -346,7 +346,6 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -382,7 +381,7 @@ GameObject:
   - 60: {fileID: 681603504}
   m_Layer: 0
   m_Name: goal1
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -614,6 +613,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 143296, guid: 644adf9b9d851684fa09532084862dd9, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 644adf9b9d851684fa09532084862dd9, type: 2}
   m_IsPrefabParent: 0
@@ -840,6 +843,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 1
   control: L
+  speed: 0
+  maxSpeed: 0
 --- !u!114 &1643845302 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11414198, guid: 6c009eba194204a6cb7944143abb2ea9,

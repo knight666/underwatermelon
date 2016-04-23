@@ -23,11 +23,13 @@ public class CameraShake : MonoBehaviour
 
 	IEnumerator Shake(float s){
 		//if(Camera.main.GetComponent<MotionBlur>())
+		Vector3 orgPosition = transform.position;
 		while (s>0) {
 			camTransform.transform.position += Random.insideUnitSphere * shakeAmount*(100/seconds*s)/100;
 			s-=Time.deltaTime;
 			yield return new WaitForEndOfFrame ();
 		}
+		transform.position = orgPosition;
 		this.enabled = false;
 	}
 }

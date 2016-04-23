@@ -11,6 +11,8 @@ public class Fish : MonoBehaviour {
 	public AudioClip audioSuck;
 	public AudioClip audioPuff;
 	AudioSource audio;
+	public GameObject suckEffect;
+	GameObject curSuckEffect;
 
 	// Use this for initialization
 	void Start () {
@@ -54,6 +56,12 @@ public class Fish : MonoBehaviour {
 				h.rigidbody.AddForce((transform.position-h.transform.position).normalized*suckingSpeed);
 			}
 		}
+		if(curSuckEffect == null){
+			curSuckEffect = Instantiate(suckEffect);
+			curSuckEffect.transform.SetParent(transform);
+			curSuckEffect.transform.position = transform.position + (new Vector3(rb.velocity.x,rb.velocity.y,0)).normalized;
+		}
+
 	}
 
 	public void Puff(){

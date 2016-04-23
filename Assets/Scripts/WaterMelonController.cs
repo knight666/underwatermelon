@@ -53,12 +53,16 @@ public class WaterMelonController : MonoBehaviour {
 			gamestate.watermelons.Add(splitMelonRight);
 
 		}
-
-
-		gamestate.OnWatermelonDestroyed(gameObject);
+			
 		Camera.main.gameObject.GetComponent<CameraShake>().seconds = 0.5f;
 		Camera.main.gameObject.GetComponent<CameraShake>().shakeAmount = 1f;
 		Camera.main.gameObject.GetComponent<CameraShake>().enabled = true;
+		DestroyWatermelon();
+	}
+
+	public void DestroyWatermelon(){
+		gamestate.OnWatermelonDestroyed(gameObject);
+
 		Instantiate(splatEffect,transform.position,Quaternion.identity);
 		AudioSource.PlayClipAtPoint(audioSplat, Camera.main.transform.position, 1.0f);
 
@@ -67,6 +71,10 @@ public class WaterMelonController : MonoBehaviour {
 
 
 	void OnCollisionEnter2D(Collision2D c){
+		if(c.gameObject.tag == "Goal"){
+			//DestroyWatermelon();
+		}
+
 		if(c.gameObject.tag == "Watermelon" || !canBeDestroyed){
 			return;
 		}
