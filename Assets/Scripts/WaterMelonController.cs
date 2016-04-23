@@ -5,6 +5,7 @@ public class WaterMelonController : MonoBehaviour {
 
 	public GameObject m_melonPrefab;
 	public int m_level = 0;
+	public float hitpoints = 10f;
 	public static int MaxLevel = 1;
 	public float splitVelocity = 5f;
 	GameStateController gamestate;
@@ -61,9 +62,17 @@ public class WaterMelonController : MonoBehaviour {
 
 		Rigidbody2D rbOther = c.gameObject.GetComponent<Rigidbody2D>();
 		if(rbOther != null){
-			if((rbOther.mass+rbOther.velocity.sqrMagnitude) >= splitVelocity){
-				Split(m_level);
-			}
+			float force = (rbOther.mass+rbOther.velocity.sqrMagnitude);
+			HitMe(force*0.01f);
+		}
+	}
+
+
+	public void HitMe(float val){
+		hitpoints -= val;
+		print(hitpoints);
+		if(hitpoints <= 0){
+			Split(m_level);
 		}
 	}
 
