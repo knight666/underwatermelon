@@ -15,6 +15,7 @@ public class InputController : MonoBehaviour {
 	protected float gamepadYAxis;
 	protected float gamepadAngle;
 	protected float gamepadLBumper;
+	protected float gamepadRBumper;
 
 	protected Fish fishScript;
 	protected Rigidbody2D rb;
@@ -39,6 +40,9 @@ public class InputController : MonoBehaviour {
 		gamepadXAxis = Input.GetAxis("Gamepad" + index + control + "_X");
 		gamepadYAxis = Input.GetAxis("Gamepad" + index + control + "_Y");
 		gamepadLBumper = Input.GetAxis ("Gamepad" + index + control + "_Suck");
+		gamepadRBumper = Input.GetAxis ("Gamepad" + index + "R_Suck");
+		Debug.Log (gamepadLBumper);
+		Debug.Log (gamepadRBumper);
 
 		#if UNITY_EDITOR_WIN && UNITY_STANDALONE_WIN
 		// Xinput States
