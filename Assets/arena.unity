@@ -85,6 +85,32 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &38726189 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 199292, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
+  m_PrefabInternal: {fileID: 1961348187}
+--- !u!114 &38726190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 38726189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6075227de6742d4ab0d49a629c074d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectOfInterest: {fileID: 0}
+  audioclipAttack: {fileID: 8300000, guid: bd943ab9b42eb544eb708691385c581f, type: 3}
+  audioclipSustain: {fileID: 8300000, guid: 024191fba0e3e08408b320420f11bc12, type: 3}
+  audioclipRelease: {fileID: 8300000, guid: 2ab6c548b6ccfa04d90811572d7905b4, type: 3}
+  surroundAttack: {fileID: 0}
+  surroundSustain: {fileID: 0}
+  surroundRelease: {fileID: 0}
+  soundTriggers: []
+  volume: 0
+  active: 0
+  eventControlled: 0
 --- !u!114 &79680146 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11482160, guid: b741e85e42f3446f1b77f04add4bf415,
@@ -348,6 +374,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1842068181}
   m_RootOrder: 0
+--- !u!1 &313194068 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 165840, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
+  m_PrefabInternal: {fileID: 1961348187}
+--- !u!114 &313194069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 313194068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6075227de6742d4ab0d49a629c074d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectOfInterest: {fileID: 0}
+  audioclipAttack: {fileID: 8300000, guid: bd943ab9b42eb544eb708691385c581f, type: 3}
+  audioclipSustain: {fileID: 8300000, guid: 024191fba0e3e08408b320420f11bc12, type: 3}
+  audioclipRelease: {fileID: 8300000, guid: 2ab6c548b6ccfa04d90811572d7905b4, type: 3}
+  surroundAttack: {fileID: 0}
+  surroundSustain: {fileID: 0}
+  surroundRelease: {fileID: 0}
+  soundTriggers: []
+  volume: 0
+  active: 0
+  eventControlled: 0
 --- !u!1 &315619876
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,6 +442,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1749099918}
   m_RootOrder: 5
+--- !u!1 &441030391 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 172704, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
+  m_PrefabInternal: {fileID: 1961348187}
+--- !u!114 &441030392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 441030391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6075227de6742d4ab0d49a629c074d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectOfInterest: {fileID: 0}
+  audioclipAttack: {fileID: 8300000, guid: bd943ab9b42eb544eb708691385c581f, type: 3}
+  audioclipSustain: {fileID: 8300000, guid: 024191fba0e3e08408b320420f11bc12, type: 3}
+  audioclipRelease: {fileID: 8300000, guid: 2ab6c548b6ccfa04d90811572d7905b4, type: 3}
+  surroundAttack: {fileID: 0}
+  surroundSustain: {fileID: 0}
+  surroundRelease: {fileID: 0}
+  soundTriggers: []
+  volume: 0
+  active: 0
+  eventControlled: 0
 --- !u!1 &485162828
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,6 +1034,58 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 644adf9b9d851684fa09532084862dd9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1017696492 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 116234, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
+  m_PrefabInternal: {fileID: 1961348187}
+--- !u!114 &1017696493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1017696492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6075227de6742d4ab0d49a629c074d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectOfInterest: {fileID: 0}
+  audioclipAttack: {fileID: 8300000, guid: bd943ab9b42eb544eb708691385c581f, type: 3}
+  audioclipSustain: {fileID: 8300000, guid: 024191fba0e3e08408b320420f11bc12, type: 3}
+  audioclipRelease: {fileID: 8300000, guid: 2ab6c548b6ccfa04d90811572d7905b4, type: 3}
+  surroundAttack: {fileID: 0}
+  surroundSustain: {fileID: 0}
+  surroundRelease: {fileID: 0}
+  soundTriggers: []
+  volume: 0
+  active: 0
+  eventControlled: 0
+--- !u!1 &1057289056 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 198262, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
+  m_PrefabInternal: {fileID: 1961348187}
+--- !u!114 &1057289057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1057289056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6075227de6742d4ab0d49a629c074d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectOfInterest: {fileID: 0}
+  audioclipAttack: {fileID: 8300000, guid: bd943ab9b42eb544eb708691385c581f, type: 3}
+  audioclipSustain: {fileID: 8300000, guid: 024191fba0e3e08408b320420f11bc12, type: 3}
+  audioclipRelease: {fileID: 8300000, guid: 2ab6c548b6ccfa04d90811572d7905b4, type: 3}
+  surroundAttack: {fileID: 0}
+  surroundSustain: {fileID: 0}
+  surroundRelease: {fileID: 0}
+  soundTriggers: []
+  volume: 0
+  active: 0
+  eventControlled: 0
 --- !u!1 &1075127876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,6 +1174,28 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 147708, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
   m_PrefabInternal: {fileID: 1961348187}
+--- !u!114 &1163831176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1163831175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6075227de6742d4ab0d49a629c074d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectOfInterest: {fileID: 0}
+  audioclipAttack: {fileID: 0}
+  audioclipSustain: {fileID: 0}
+  audioclipRelease: {fileID: 0}
+  surroundAttack: {fileID: 0}
+  surroundSustain: {fileID: 0}
+  surroundRelease: {fileID: 0}
+  soundTriggers: []
+  volume: 0
+  active: 0
+  eventControlled: 0
 --- !u!114 &1163831182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1220,6 +1372,32 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1961348187}
   m_Script: {fileID: 11500000, guid: 37758b3a86a7d47ecbb60c0b0f103405, type: 3}
+--- !u!1 &1470413825 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 108934, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
+  m_PrefabInternal: {fileID: 1961348187}
+--- !u!114 &1470413826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1470413825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6075227de6742d4ab0d49a629c074d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectOfInterest: {fileID: 0}
+  audioclipAttack: {fileID: 8300000, guid: bd943ab9b42eb544eb708691385c581f, type: 3}
+  audioclipSustain: {fileID: 8300000, guid: 024191fba0e3e08408b320420f11bc12, type: 3}
+  audioclipRelease: {fileID: 8300000, guid: 2ab6c548b6ccfa04d90811572d7905b4, type: 3}
+  surroundAttack: {fileID: 0}
+  surroundSustain: {fileID: 0}
+  surroundRelease: {fileID: 0}
+  soundTriggers: []
+  volume: 0
+  active: 0
+  eventControlled: 0
 --- !u!1 &1479209111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,6 +1553,32 @@ MonoBehaviour:
   control: L
   speed: 0
   maxSpeed: 0
+--- !u!1 &1612450530 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 145900, guid: b741e85e42f3446f1b77f04add4bf415, type: 2}
+  m_PrefabInternal: {fileID: 1961348187}
+--- !u!114 &1612450531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1612450530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6075227de6742d4ab0d49a629c074d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectOfInterest: {fileID: 0}
+  audioclipAttack: {fileID: 8300000, guid: bd943ab9b42eb544eb708691385c581f, type: 3}
+  audioclipSustain: {fileID: 8300000, guid: 024191fba0e3e08408b320420f11bc12, type: 3}
+  audioclipRelease: {fileID: 8300000, guid: 2ab6c548b6ccfa04d90811572d7905b4, type: 3}
+  surroundAttack: {fileID: 0}
+  surroundSustain: {fileID: 0}
+  surroundRelease: {fileID: 0}
+  soundTriggers: []
+  volume: 0
+  active: 0
+  eventControlled: 0
 --- !u!114 &1643845302 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11414198, guid: 6c009eba194204a6cb7944143abb2ea9,
