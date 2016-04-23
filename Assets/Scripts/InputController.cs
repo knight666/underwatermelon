@@ -68,7 +68,7 @@ public class InputController : MonoBehaviour {
 		if (prevState.Triggers.Left == 1 && state.Triggers.Left < 1 && control == "L")
 		{
 			Debug.Log ("Player " + index + " left sucks.");
-			fishScript.Suck(); //TODO: use the stopfunction when the function is there
+			fishScript.StopSuck();
 		}
 
 
@@ -81,7 +81,7 @@ public class InputController : MonoBehaviour {
 		if (prevState.Triggers.Right == 1 && state.Triggers.Right < 1 && control == "R")
 		{
 			Debug.Log ("Player " + index + " right sucks.");
-			fishScript.Suck(); //TODO: use the stopfunction when the function is there
+			fishScript.StopSuck();
 		}
 		#endif
 
