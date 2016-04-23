@@ -87,12 +87,13 @@ public class Fish : MonoBehaviour {
 	public void Puff(){
 		audio.PlayOneShot(audioPuff, 1.0f);
 
-		RaycastHit2D[] hits = Physics2D.CircleCastAll(new Vector2(transform.position.x,transform.position.y),2,Vector2.zero);
+		RaycastHit2D[] hits = Physics2D.CircleCastAll(new Vector2(transform.position.x,transform.position.y),3,Vector2.zero);
 		foreach(RaycastHit2D h in hits){
 			if(h.rigidbody != null){
 				h.rigidbody.AddForce((h.transform.position-transform.position).normalized*puffForce,ForceMode2D.Impulse);
 
 				if(h.transform.gameObject.tag == "Watermelon"){
+					h.rigidbody.AddForce((h.transform.position-transform.position).normalized*puffForce*10f,ForceMode2D.Impulse);
 					h.transform.gameObject.GetComponent<WaterMelonController>().HitMe(3f);
 				}
 			}
