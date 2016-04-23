@@ -213,7 +213,7 @@ MonoBehaviour:
   m_melonPrefab: {fileID: 143296}
   m_level: 0
   hitpoints: 10
-  splitVelocity: 80
+  splitVelocity: 120
   audioHits:
   - {fileID: 8300000, guid: e9e6b911b7e9d3948b0036e2cd882fb3, type: 3}
   - {fileID: 8300000, guid: a925645d4bc1fb34eaec0e1a16945d9c, type: 3}
@@ -3306,7 +3306,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: splitVelocity
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 143296}

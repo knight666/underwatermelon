@@ -8,7 +8,7 @@ public class WaterMelonController : MonoBehaviour {
 	public int m_level = 0;
 	public float hitpoints = 10f;
 	public static int MaxLevel = 1;
-	public float splitVelocity = 5f;
+	public float splitModifier = 0.005f;
 	GameStateController gamestate;
 	bool canBeDestroyed = false;
 	public List<AudioClip> audioHits = new List<AudioClip>();
@@ -79,10 +79,13 @@ public class WaterMelonController : MonoBehaviour {
 			return;
 		}
 
+
+
 		Rigidbody2D rbOther = c.gameObject.GetComponent<Rigidbody2D>();
 		if(rbOther != null){
 			float force = (rbOther.mass+rbOther.velocity.sqrMagnitude);
-			HitMe(force*0.01f);
+			print(force+" "+force*splitModifier);
+			HitMe(force*splitModifier);
 		}
 	}
 

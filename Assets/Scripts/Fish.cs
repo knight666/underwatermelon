@@ -66,9 +66,9 @@ public class Fish : MonoBehaviour {
 		while(isSucking){
 			RaycastHit2D[] hits = Physics2D.CircleCastAll(new Vector2(transform.position.x,transform.position.y),puffRadius,(new Vector2(rb.velocity.x,rb.velocity.y)).normalized);
 
-			print(hits.Length);
 			foreach(RaycastHit2D h in hits){
 				if(h.rigidbody != null){
+					print("THIS GUY "+h.collider.gameObject.name);
 					h.rigidbody.AddForce((transform.position-h.transform.position).normalized*suckingSpeed);
 				}
 			}

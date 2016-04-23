@@ -443,7 +443,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 116234}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 892089994c9520f49960296d25388167, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -630,7 +630,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 145900}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 892089994c9520f49960296d25388167, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -817,7 +817,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 165840}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 892089994c9520f49960296d25388167, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1004,7 +1004,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 108934}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 892089994c9520f49960296d25388167, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1191,7 +1191,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 198262}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 892089994c9520f49960296d25388167, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1378,7 +1378,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 172704}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 892089994c9520f49960296d25388167, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1565,7 +1565,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 199292}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 892089994c9520f49960296d25388167, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1752,7 +1752,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 147708}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 892089994c9520f49960296d25388167, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -1946,6 +1946,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   suckingSpeed: 100
   puffForce: 100
+  puffRadius: 10
   PuffFish: {fileID: 192992, guid: 5273954e50ebc4b83bd78c3fb309a241, type: 2}
   audioSuck: {fileID: 0}
   audioPuff: {fileID: 0}
@@ -2004,6 +2005,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   suckingSpeed: 100
   puffForce: 100
+  puffRadius: 10
   PuffFish: {fileID: 192992, guid: 38be0d5f0c2df46489515394773a4730, type: 2}
   audioSuck: {fileID: 0}
   audioPuff: {fileID: 0}
@@ -2035,6 +2037,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   suckingSpeed: 100
   puffForce: 100
+  puffRadius: 10
   PuffFish: {fileID: 192992, guid: 5273954e50ebc4b83bd78c3fb309a241, type: 2}
   audioSuck: {fileID: 0}
   audioPuff: {fileID: 0}
@@ -2054,6 +2057,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   suckingSpeed: 100
   puffForce: 100
+  puffRadius: 10
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
   audioSuck: {fileID: 0}
   audioPuff: {fileID: 0}
@@ -2103,6 +2107,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   suckingSpeed: 100
   puffForce: 100
+  puffRadius: 10
   PuffFish: {fileID: 192992, guid: 76b6f36ce9e544ad49a8e4307fa24406, type: 2}
   audioSuck: {fileID: 8300000, guid: bd943ab9b42eb544eb708691385c581f, type: 3}
   audioPuff: {fileID: 8300000, guid: 2f88e75aec9976a4caa10c89cf67f9e3, type: 3}
@@ -2176,6 +2181,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   suckingSpeed: 100
   puffForce: 100
+  puffRadius: 10
   PuffFish: {fileID: 192992, guid: 38be0d5f0c2df46489515394773a4730, type: 2}
   audioSuck: {fileID: 0}
   audioPuff: {fileID: 0}
@@ -2207,6 +2213,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   suckingSpeed: 100
   puffForce: 100
+  puffRadius: 10
   PuffFish: {fileID: 192992, guid: c7cec361c9d94437897498b3acbd62ad, type: 2}
   audioSuck: {fileID: 0}
   audioPuff: {fileID: 0}
@@ -2256,6 +2263,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   suckingSpeed: 100
   puffForce: 100
+  puffRadius: 10
   PuffFish: {fileID: 192992, guid: c7cec361c9d94437897498b3acbd62ad, type: 2}
   audioSuck: {fileID: 0}
   audioPuff: {fileID: 0}
