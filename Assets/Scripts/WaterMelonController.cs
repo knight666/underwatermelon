@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class WaterMelonController : MonoBehaviour {
 
@@ -10,12 +11,16 @@ public class WaterMelonController : MonoBehaviour {
 	public float splitVelocity = 5f;
 	GameStateController gamestate;
 	bool canBeDestroyed = false;
+	public List<AudioClip> audioHits = new List<AudioClip>();
+	public AudioClip audioSplat;
+	AudioSource audio;
 	public GameObject splatEffect;
 
 	// Use this for initialization
 	void Start () {
 		gamestate = GameObject.Find("GameState").GetComponent<GameStateController>();
 		StartCoroutine(WaitToBeDestroyable());
+		audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -59,6 +64,8 @@ public class WaterMelonController : MonoBehaviour {
 		gamestate.OnWatermelonDestroyed(gameObject);
 
 		Instantiate(splatEffect,transform.position,Quaternion.identity);
+		audio.PlayOneShot(audioSplat, 1.0f);
+
 		Destroy(gameObject);
 	}
 
@@ -77,6 +84,8 @@ public class WaterMelonController : MonoBehaviour {
 
 
 	public void HitMe(float val){
+		int r = (int)Random.Range(0, audioHits.Count);
+		audio.PlayOneShot((AudioClip)audioHits[r], 1.0f);
 		hitpoints -= val;
 		if(hitpoints <= 0){
 			Split(m_level);
