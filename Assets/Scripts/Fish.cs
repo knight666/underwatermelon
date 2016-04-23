@@ -15,11 +15,13 @@ public class Fish : MonoBehaviour {
 	public GameObject suckEffect;
 	GameObject curSuckEffect;
 	bool isSucking = false;
+	dspASR asr;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		audio = GetComponent<AudioSource>();
+		asr = GetComponent<dspASR>();
 	}
 	
 	// Update is called once per frame
@@ -67,6 +69,7 @@ public class Fish : MonoBehaviour {
 		if (isSucking)
 			return;
 
+		asr.TriggerAS();
 		isSucking = true;
 		StartCoroutine(SuckRoutine());
 	}
@@ -76,6 +79,7 @@ public class Fish : MonoBehaviour {
 		if (!isSucking)
 			return;
 
+		asr.TriggerR();
 		isSucking = false;
 		Destroy(curSuckEffect);
 	}
